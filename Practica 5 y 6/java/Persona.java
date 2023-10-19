@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Persona {
-    String nombre, nombres, appat, apmat, ocupacion, id, nacimiento, diaN, mesN, agnoN;
-    int edad;
+    private String nombre, nombres, appat, apmat, ocupacion, id, nacimiento, diaN, mesN, agnoN;
+    private int edad;
 
     //Definimos los constructores
     
