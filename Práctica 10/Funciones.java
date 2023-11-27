@@ -17,25 +17,17 @@ public class Funciones {
         System.out.print("Ingrese su correo: ");
         String cor = sc.nextLine();
         System.out.print("Ingrese su celular: ");
-        int cel = sc.nextInt();
+        long cel = sc.nextLong();
         System.out.println("Sus calificaciones han sido ingresadas automáticamente: ");
         double cali[][] = new double[2][55];
         
-        
-        Alumno alum = new Alumno(bol, cel, cali, nom, cor);
-        imprimirCalificaciones(alum.getCalificaciones());
+        Alumno alum = new Alumno(bol, cel, nom, cor);
+        alum.setCalificaciones(cali);
+
+        //System.out.println(alum.getNombre());
+        //imprimirCalificaciones(alum.getCalificaciones());
         ListadoAlumnos.add(alum);
         guardar(ListadoAlumnos, nomarch);
-    }
-
-    public void llenarCalificaciones(double cali[][]) {
-        for (int i = 0; i < 55; i++) {
-            cali[0][i] = i + 1;
-        }
-
-        for (int i = 0; i < 55; i++) {
-            cali[1][i] = (double) (Math.random() * 10) + 1;
-        }
     }
 
     public void imprimir() {
@@ -93,7 +85,7 @@ public class Funciones {
             System.out.println("1. Añadir elemento");
             System.out.println("2. Mostrar elementos");
             System.out.println("3. Salir");
-            System.out.print("Selecciona una opción: ");
+            System.out.print("Selecciona una opcion: ");
 
             opcion = sc.nextInt();
 
